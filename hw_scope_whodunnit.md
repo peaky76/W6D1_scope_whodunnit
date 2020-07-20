@@ -249,27 +249,27 @@ const scenario = {
 let room = 'Ballroom';
 
 const plotTwist = () => {
-  scenario.room = room
-}
+  scenario.room = room;
+};
 
 const unexpectedOutcome = () => {
-  let room = 'Kitchen'
-} 
+  let room = 'Kitchen';
+};
 
 const unpredictedHappening = () => {
-  room = 'Study'
-}
+  room = 'Study';
+};
 
 const declareRoom = () => {
-  return `The room is ${scenario.room}.`
-}
+  return `The room is ${scenario.room}.`;
+};
 
-unpredictedHappening()
-unexpectedOutcome()
-plotTwist()
+unpredictedHappening();
+unexpectedOutcome();
+plotTwist();
 
-const verdict = declareRoom()
-console.log(verdict)
+const verdict = declareRoom();
+console.log(verdict);
 ```
 
 The room is Study. The scenario.room is originally set to Conservatory. A variable room is originally set to Ballroom. Both the unexpectedOutcome and unpredictedHappening functions change a variable called room. But in the unexpectedOutcome function this is a new block level variable called room. Only unpredictedHappening changes the original room variable held at the top level. The plotTwist function assigns to scenario.room whatever is held in that top level variable room, which once the functions have been run is Study (assigned in the unpredictedHappening function) 
