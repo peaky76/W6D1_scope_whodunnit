@@ -28,7 +28,7 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
-<!-- The murderer is Miss Scarlett  -->
+The murderer is Miss Scarlett 
 
 #### Episode 2
 
@@ -48,7 +48,7 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
-<!-- Will throw an error because can't reassign const murderer. -->
+Will throw an error because can't reassign const murderer.
 
 #### Episode 3
 
@@ -66,10 +66,10 @@ console.log('First Verdict: ', firstVerdict);
 const secondVerdict = `The murderer is ${murderer}.`;
 console.log('Second Verdict: ', secondVerdict);
 ```
-<!-- 
+
 First verdict will be the murderer is Mrs Peacock. It calls a function which has its own murderer variable declared at block level.
 Second verdict will be the murderer is Professor Plum. It calls the murder variable directly and the value for murderer held at the level of the whole file is Prof Plum. 
--->
+
 
 #### Episode 4
 
@@ -87,9 +87,9 @@ const suspects = declareAllSuspects();
 console.log(suspects);
 console.log(`Suspect three is ${suspectThree}.`);
 ```
-<!-- 
+
 This will first list the suspects as Miss Scarlet, Prof Plum and Col Mustard as suspectThree is reset at block level in the declareAllSuspects function
-The second output will list Mrs Peacock as suspectThree as the reassignment as Col Mustard only extends to the scope of the declareAllSuspects function -->
+The second output will list Mrs Peacock as suspectThree as the reassignment as Col Mustard only extends to the scope of the declareAllSuspects function
 
 #### Episode 5
 
@@ -112,8 +112,8 @@ changeWeapon('Revolver');
 const verdict = declareWeapon();
 console.log(verdict);
 ```
-<!-- 
-The weapon is the revolver. It is possible to change the properties of the object held in const scenario, so reassigning the weapon in the changeWeapon function is allowed. -->
+
+The weapon is the revolver. It is possible to change the properties of the object held in const scenario, so reassigning the weapon in the changeWeapon function is allowed.
 
 #### Episode 6
 
@@ -138,8 +138,8 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-<!-- 
-The murderer is Mrs White. The murderer variable is declared at block level and all the subsequent changes are within that scope. -->
+
+The murderer is Mrs White. The murderer variable is declared at block level and all the subsequent changes are within that scope.
 
 #### Episode 7
 
@@ -171,7 +171,7 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
-<!-- The murderer is Mr Green. The murderer variable declared in plotTwist is a new variable which only has block scope so it won't affect the value of the murderer stored at the level of the main body of the changeMurderer function -->
+The murderer is Mr Green. The murderer variable declared in plotTwist is a new variable which only has block scope so it won't affect the value of the murderer stored at the level of the main body of the changeMurderer function
 
 #### Episode 8
 
@@ -212,7 +212,7 @@ const verdict = declareWeapon();
 console.log(verdict);
 ```
 
-<!-- The weapon is the Candle Stick. The properties of the object held in const scenario can be changed. The room is changed first in the changeScenario function, then because the tests in the if blocks of plotTwist and unexpectedOutcome pass, the murderer and weapon is changed.  -->
+The weapon is the Candle Stick. The properties of the object held in const scenario can be changed. The room is changed first in the changeScenario function, then because the tests in the if blocks of plotTwist and unexpectedOutcome pass, the murderer and weapon is changed. 
 
 #### Episode 9
 
@@ -231,7 +231,7 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
-<!-- The murderer is Professor Plum. Although the if test passes it creates a new block level variable called murderer, this does not affect the variable held at the top level, which is still Professor Plum. -->
+The murderer is Professor Plum. Although the if test passes it creates a new block level variable called murderer, this does not affect the variable held at the top level, which is still Professor Plum.
 
 ### Extensions
 
@@ -271,5 +271,5 @@ plotTwist()
 const verdict = declareRoom()
 console.log(verdict)
 ```
-<!-- 
-The room is Study. The scenario.room is originally set to Conservatory. A variable room is originally set to Ballroom. Both the unexpectedOutcome and unpredictedHappening functions change a variable called room. But in the unexpectedOutcome function this is a new block level variable called room. Only unpredictedHappening changes the original room variable held at the top level. The plotTwist function assigns to scenario.room whatever is held in that top level variable room, which once the functions have been run is Study (assigned in the unpredictedHappening function)  -->
+
+The room is Study. The scenario.room is originally set to Conservatory. A variable room is originally set to Ballroom. Both the unexpectedOutcome and unpredictedHappening functions change a variable called room. But in the unexpectedOutcome function this is a new block level variable called room. Only unpredictedHappening changes the original room variable held at the top level. The plotTwist function assigns to scenario.room whatever is held in that top level variable room, which once the functions have been run is Study (assigned in the unpredictedHappening function) 
